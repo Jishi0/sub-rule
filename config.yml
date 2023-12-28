@@ -16,9 +16,9 @@ dns:
     - www.msftconnecttest.com
   use-hosts: true
   nameserver:
-    - 'https://1.1.1.1/dns-query#代理'
-    - 'https://chrome.cloudflare-dns.com/dns-query#代理'
-    - 'https://dns.google/dns-query#代理'
+    - 'https://1.1.1.1/dns-query#♻️ 节点选择'
+    - 'https://chrome.cloudflare-dns.com/dns-query#♻️ 节点选择'
+    - 'https://dns.google/dns-query#♻️ 节点选择'
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://sm2.doh.pub/dns-query
