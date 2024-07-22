@@ -11,8 +11,8 @@ dns:
   enhanced-mode: fake-ip
   use-hosts: true
   nameserver:
-    - 'https://1.1.1.1/dns-query#♻️ 节点选择&h3=true'
-    - 'https://8.8.8.8/dns-query#♻️ 节点选择&h3=true'
+    - 'https://1.1.1.1/dns-query#代理&h3=true'
+    - 'https://8.8.8.8/dns-query#代理&h3=true'
   proxy-server-nameserver:
     - 'https://223.5.5.5/dns-query#h3=true'
   nameserver-policy:
@@ -34,19 +34,19 @@ unified-delay: true
 
 rules:
   - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,bfv.exe,🎮 游戏平台
-  - PROCESS-NAME,EADesktop.exe,🎮 游戏平台
-  - PROCESS-NAME,EABackgroundService.exe,🎮 游戏平台
-  - PROCESS-NAME,QtWebEngineProcess.exe,🎮 游戏平台
-  - PROCESS-NAME,EACefSubProcess.exe,🎮 游戏平台
-  - DOMAIN,bam.nr-data.net,🎮 游戏平台
-  - DOMAIN,pin-em.data.ea.com,🎮 游戏平台
-  - DOMAIN,sdk.split.io,🎮 游戏平台
-  - DOMAIN,gateway.ea.com,🎮 游戏平台
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net,🤖 人工智能
-  - DOMAIN-SUFFIX,mqmqgo.pp.ua,🏡 我的网站
-  - DOMAIN-SUFFIX,mqmqgo.cloudns.eu,🏡 我的网站
-  - DOMAIN-SUFFIX,mqmqgo.top,🏡 我的网站
-  - PROCESS-NAME,HeavenBurnsRed.exe,🎬 巴哈姆特
-  - domain,api-ap.heaven-burns-red.wfs.games,🎬 巴哈姆特
+  - PROCESS-NAME,bfv.exe,代理
+  - PROCESS-NAME,EADesktop.exe,代理
+  - PROCESS-NAME,EABackgroundService.exe,代理
+  - PROCESS-NAME,QtWebEngineProcess.exe,代理
+  - PROCESS-NAME,EACefSubProcess.exe,代理
+  - DOMAIN,bam.nr-data.net,代理
+  - DOMAIN,pin-em.data.ea.com,代理
+  - DOMAIN,sdk.split.io,代理
+  - DOMAIN,gateway.ea.com,代理
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net,代理
+  - DOMAIN-SUFFIX,mqmqgo.pp.ua,代理
+  - DOMAIN-SUFFIX,mqmqgo.cloudns.eu,代理
+  - DOMAIN-SUFFIX,mqmqgo.top,代理
+  - PROCESS-NAME,HeavenBurnsRed.exe,代理
+  - domain,api-ap.heaven-burns-red.wfs.games,代理
   - PROCESS-NAME,Photoshop.exe,REJECT
