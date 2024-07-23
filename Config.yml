@@ -4,7 +4,6 @@ bind-address: "*"
 ipv6: true
 mode: rule
 log-level: info
-#unified-delay: true
 external-controller: '127.0.0.1:9090'
 dns:
   enabled: true
@@ -31,3 +30,6 @@ dns:
     - https://dns.alidns.com/dns-query#h3=true
     - https://sm2.doh.pub/dns-query#h3=true
     - https://doh.pub/dns-query#h3=true
+
+tcp-concurrent: true
+unified-delay: true
