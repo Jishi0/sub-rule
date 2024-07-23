@@ -19,15 +19,15 @@ dns:
     - www.msftncsi.com
     - www.msftconnecttest.com
   nameserver:
-    - 'https://cloudflare-dns.com/dns-query#选择'
-    - 'https://dns.google/dns-query#选择'
-    - 'https://chrome.cloudflare-dns.com/dns-query#选择'
+    - 'https://cloudflare-dns.com/dns-query#选择&h3=true'
+    - 'https://dns.google/dns-query#选择&h3=true'
+    - 'https://chrome.cloudflare-dns.com/dns-query#选择&h3=true'
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#h3=true
+    - https://sm2.doh.pub/dns-query#h3=true
+    - https://doh.pub/dns-query#h3=true
   nameserver-policy:
    geosite:cn,private:
-    - https://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#h3=true
+    - https://sm2.doh.pub/dns-query#h3=true
+    - https://doh.pub/dns-query#h3=true
