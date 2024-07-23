@@ -1,3 +1,10 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+unified-delay: true
+external-controller: '127.0.0.1:9090'
 dns:
   enabled: true
   ipv6: true
