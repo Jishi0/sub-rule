@@ -21,9 +21,12 @@ dns:
     - 'https://cloudflare-dns.com/dns-query#选择&h3=true'
     - 'https://dns.google/dns-query#选择&h3=true'
   proxy-server-nameserver:
-    - https://sm2.doh.pub/dns-query#h3=true
+    - https://doh.pub/dns-query#h3=true
+    - https://dns.alidns.com/dns-query#h3=true
   nameserver-policy:
-    'geosite:cn': https://sm2.doh.pub/dns-query#h3=true
+    'geosite:cn': 
+      - https://doh.pub/dns-query#h3=true
+      - https://dns.alidns.com/dns-query#h3=true
 
 tcp-concurrent: true
 unified-delay: true
