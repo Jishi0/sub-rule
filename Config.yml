@@ -1,22 +1,23 @@
 mixed-port: 7890
 allow-lan: true
-bind-address: '*'
+bind-address: "*"
+ipv6: true
 mode: rule
 log-level: info
-unified-delay: true
+#unified-delay: true
 external-controller: '127.0.0.1:9090'
 dns:
   enabled: true
   ipv6: true
-  listen: 127.0.0.1:53
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
+    - localhost.ptlogin2.qq.com
     - dns.msftncsi.com
     - www.msftncsi.com
     - www.msftconnecttest.com
-  use-hosts: true
   nameserver:
     - 'https://cloudflare-dns.com/dns-query#选择'
     - 'https://dns.google/dns-query#选择'
