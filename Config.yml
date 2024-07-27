@@ -16,7 +16,6 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
-    - localhost.ptlogin2.qq.com
     - dns.msftncsi.com
     - www.msftncsi.com
     - www.msftconnecttest.com
