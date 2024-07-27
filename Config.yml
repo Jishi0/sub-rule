@@ -17,9 +17,8 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
-    - dns.msftncsi.com
-    - www.msftncsi.com
-    - www.msftconnecttest.com
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
   nameserver:
     - 'https://cloudflare-dns.com/dns-query#选择&h3=true'
     - 'https://dns.google/dns-query#选择&h3=true'
