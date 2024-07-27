@@ -9,6 +9,7 @@ secret: ''
 dns:
   enable: true
   ipv6: true
+  respect-rules: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
@@ -26,9 +27,12 @@ dns:
     - https://doh.pub/dns-query#h3=true
     - https://dns.alidns.com/dns-query#h3=true
   nameserver-policy:
-    'geosite:cn': 
+    'geosite:cn,private': 
       - https://doh.pub/dns-query#h3=true
       - https://dns.alidns.com/dns-query#h3=true
+    'geosite:geolocation-!cn':
+      - 'https://cloudflare-dns.com/dns-query#选择&h3=true'
+      - 'https://dns.google/dns-query#选择&h3=true'
 
 tcp-concurrent: true
 unified-delay: true
