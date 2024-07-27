@@ -30,8 +30,8 @@ dns:
       - https://doh.pub/dns-query#h3=true
       - https://dns.alidns.com/dns-query#h3=true
     'geosite:geolocation-!cn':
-      - 'https://cloudflare-dns.com/dns-query#选择&h3=true'
-      - 'https://dns.google/dns-query#选择&h3=true'
+      - 'https://cloudflare-dns.com/dns-query#选择'
+      - 'https://dns.google/dns-query#选择'
 
 tcp-concurrent: true
 unified-delay: true
