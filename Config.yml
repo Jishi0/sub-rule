@@ -28,9 +28,6 @@ dns:
     'geosite:cn,private': 
       - 'https://sm2.doh.pub/dns-query#直连&h3=true'
       - 'https://dns.alidns.com/dns-query#直连&h3=true'
-    'geosite:geolocation-!cn':
-      - 'https://cloudflare-dns.com/dns-query#DNS&h3=true'
-      - 'https://dns.google/dns-query#DNS&h3=true'
 
 tcp-concurrent: true
 unified-delay: true
