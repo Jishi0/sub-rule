@@ -5,12 +5,11 @@ flowchart TD
   rule --> IP[匹配到基于 IP 的规则]
   rule --> null[未匹配到规则]
 
-  null --> |请求为域名|DNS
+  null --> |请求为域名（入口2）|DNS
   null --> |请求为IP|Proxy
 
   Domain --> |域名匹配到代理规则|Remote[通过代理服务器解析域名并建立连接]
   Domain --> |域名匹配到直连规则（入口1）|DNS[通过 Clash DNS 解析域名]
-  Domain --> |域名未匹配到规则（入口2）|DNS
 
   DNS --> FakeIP
   FakeIP --> |查询 DNS 缓存|Cache
