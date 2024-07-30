@@ -27,7 +27,7 @@ flowchart TD
 
 
   Get --> |出口1（对应入口1）|Direct[通过 IP 直接建立连接]
-  Get --> |出口2（对应入口2）|rule
+  Get --> |出口2（对应入口2）|IP
 
   IP --> |IP匹配到直连规则|Direct
   IP --> |IP匹配到代理规则|Proxy[通过 IP 经代理建立连接]
