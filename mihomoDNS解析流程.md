@@ -4,7 +4,6 @@ flowchart TD
   Start[客户端发起请求] --> rule[匹配规则]
   rule --> Domain[匹配到基于域名的规则或匹配到match]
   rule --> IP[匹配到基于 IP 的规则]
-  rule --> null[未匹配到规则]
 
   Domain --> |域名匹配到代理规则或匹配到match|Remote[通过代理服务器解析域名并建立连接]
   Domain --> |域名匹配到直连规则|DNS1[DNS]
