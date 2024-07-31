@@ -17,7 +17,7 @@ flowchart TD
 
   null --> |请求包含IP|Proxy
   null --> |请求只为域名|DNS3[DNS]
-  DNS2 --> rule
+  DNS3 --> rule
 
 ```
 
