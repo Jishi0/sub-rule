@@ -6,7 +6,7 @@ flowchart TD
   rule --> IP[匹配到基于 IP 的规则]
   rule --> null[未匹配到规则]
 
-  Domain --> |域名匹配到代理规则|Remote[通过代理服务器解析域名并建立连接]
+  Domain --> |域名匹配到代理规则或未匹配到规则|Remote[通过代理服务器解析域名并建立连接]
   Domain --> |域名匹配到直连规则|DNS1[DNS]
   DNS1 --> Direct[通过 IP 直接建立连接]
 
@@ -14,10 +14,6 @@ flowchart TD
   DNS2 --> rule
   IP --> |IP匹配到直连规则|Direct
   IP --> |IP匹配到代理规则|Proxy[通过 IP 经代理建立连接]
-
-  null --> |请求包含IP|Proxy
-  null --> |请求只为域名|DNS3[DNS]
-  DNS3 --> rule
 
 ```
 
