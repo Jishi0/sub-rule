@@ -13,9 +13,9 @@ flowchart TD
   IP --> |IP匹配到直连规则|Direct
   IP --> |IP匹配到代理规则|Proxy[通过 IP 经代理建立连接]
 
+  null --> |请求包含IP|Proxy
   null --> |请求只为域名|DNS2[DNS]
   DNS2 --> rule
-  null --> |请求包含IP|Proxy
 
 ```
 
