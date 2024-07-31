@@ -10,7 +10,7 @@ flowchart TD
   DNS1 --> Direct[通过 IP 直接建立连接]
 
   IP --> |请求只包含域名|DNS2[DNS]
-  DNS2 --> rule
+  DNS2 --> |继续匹配|IP
   IP --> |IP匹配命中到直连规则|Direct
   IP --> |IP匹配命中到代理规则|Proxy[通过 IP 经代理建立连接]
 
