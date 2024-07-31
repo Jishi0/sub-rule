@@ -10,11 +10,13 @@ flowchart TD
   Domain --> |域名匹配到直连规则|DNS1[DNS]
   DNS1 --> Direct[通过 IP 直接建立连接]
 
+  IP --> |请求只包含域名|DNS2[DNS]
+  DNS2 --> IP[DNS]
   IP --> |IP匹配到直连规则|Direct
   IP --> |IP匹配到代理规则|Proxy[通过 IP 经代理建立连接]
 
   null --> |请求包含IP|Proxy
-  null --> |请求只为域名|DNS2[DNS]
+  null --> |请求只为域名|DNS3[DNS]
   DNS2 --> rule
 
 ```
