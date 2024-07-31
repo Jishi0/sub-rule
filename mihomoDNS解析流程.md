@@ -22,9 +22,9 @@ flowchart TD
   DNS[通过 Clash DNS 解析域名] --> FakeIP
   FakeIP --> |查询 DNS 缓存|Cache
 
-  Cache --> |Cache 命中，FakeIP-Direct 命中|Get[查询得到 IP]
+  Cache --> |Cache 命中，FakeIP-Direct 命中|Get[得到真IP]
   Cache --> |Cache 命中，FakeIP-Direct 未命中|NS[匹配 nameserver-policy 并查询 ]
-  Cache --> |Cache 未命中|FakeGet[返回假 IP]
+  Cache --> |Cache 未命中|FakeGet[得到假IP]
 
   NS --> |匹配成功| Get
   NS --> |匹配失败| NF[nameserver/fallback 并发查询]
