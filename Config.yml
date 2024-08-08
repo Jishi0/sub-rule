@@ -19,8 +19,8 @@ dns:
     - '*.msftncsi.com'
     - '*.msftconnecttest.com'
   nameserver:
-    - 'https://cloudflare-dns.com/dns-query#DNS&h3=true'
-    - 'https://dns.google/dns-query#DNS&h3=true'
+    - 'https://cloudflare-dns.com/dns-query#自动'
+    - 'https://dns.google/dns-query#自动'
   proxy-server-nameserver:
     - 'https://sm2.doh.pub/dns-query#直连&h3=true'
     - 'https://dns.alidns.com/dns-query#直连&h3=true'
