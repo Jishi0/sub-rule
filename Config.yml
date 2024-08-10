@@ -20,8 +20,8 @@ dns:
     - '*.msftconnecttest.com'
   nameserver:
     - 'quic://94.140.14.14#选择'
-    - 'https://1.1.1.1/dns-query#选择'
-    - 'https://8.8.8.8/dns-query#选择'
+    - 'tls://1.1.1.1:853#选择'
+    - 'tls://8.8.8.8:853#选择'
   proxy-server-nameserver:
     - 'quic://223.5.5.5#直连'
     - 'https://1.12.12.12/dns-query#直连'
