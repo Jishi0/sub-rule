@@ -28,4 +28,5 @@ dns:
       - 'tls://1.1.1.1:853#选择'
       - 'tls://8.8.8.8:853#选择'
 
+unified-delay: true
 tcp-concurrent: true
