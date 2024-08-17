@@ -31,4 +31,5 @@ dns:
       - 'quic://223.5.5.5:853#直连'
       - 'https://1.12.12.12:443/dns-query#直连'
 
+unified-delay: true
 tcp-concurrent: true
