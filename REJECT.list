@@ -1,1 +1,2 @@
-
+# 禁用HTTP/3
+AND,((NETWORK,UDP),(DST-PORT,443))
