@@ -1,0 +1,7 @@
+DOMAIN-SET,.atom-log.3.cn
+USER-AGENT,Instagram*
+URL-REGEX,^http://google\.com
+SRC-IP,192.168.20.100
+DEST-PORT,80
+PROTOCOL,HTTP
+SCRIPT,ScriptName
