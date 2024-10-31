@@ -1,4 +1,4 @@
-# 禁用HTTP/3
+# HTTP/3
 AND,((NETWORK,UDP),(DST-PORT,443))
 
 # 哔哩漫游黑名单
