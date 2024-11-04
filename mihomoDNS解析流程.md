@@ -6,7 +6,7 @@ flowchart TD
   rule --> IP[匹配到基于 IP 的规则]
 
   Domain --> |域名匹配命中到代理规则|Remote[通过代理服务器解析域名并建立连接]
-  Domain --> |域名匹配命中到直连规则|DNS1[DNS请求真IP，如配置了direct-nameserver则使用其解析]
+  Domain --> |域名匹配命中到直连规则|DNS1[DNS请求真IP（如配置了direct-nameserver则使用其解析）]
   DNS1 --> Direct[通过 IP 直接建立连接]
 
   IP --> |IP匹配命中到直连规则|Direct
