@@ -2,12 +2,12 @@
 ```mermaid
 flowchart TD
   Start[客户端发起请求] --> rule[匹配规则]
-  rule --> Domain[匹配命中到基于域名的规则或匹配命中到match]
+  rule --> Domain[匹配命中到基于域名的规则]
   rule --> IP[匹配到基于 IP 的规则]
 
-  Domain --> |域名匹配命中到代理规则或匹配命中到match|Remote[通过代理服务器解析域名并建立连接]
+  Domain --> |域名匹配命中到代理规则|Remote[通过代理服务器解析域名并建立连接]
   Domain --> |域名匹配命中到直连规则|DNS1[DNS请求真IP]
-  DNS1 --> Direct[通过 IP 直接建立连接]
+  DNS1 --> Direct[通过 IP 直接建立连接，（如配置了direct-nameserver则使用其解析）]
 
   IP --> |IP匹配命中到直连规则|Direct
   IP --> |IP匹配命中到代理规则|Proxy[通过 IP 经代理建立连接]
