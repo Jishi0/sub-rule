@@ -19,13 +19,13 @@ dns:
     - '*.msftncsi.com'
     - '*.msftconnecttest.com'
     - weatherapi.market.xiaomi.com
-  nameserver:
-    - 'quic://223.5.5.5:853#直连'
-    - 'https://1.12.12.12:443/dns-query#直连'
   proxy-server-nameserver:
     - 'quic://223.5.5.5:853#直连'
     - 'https://1.12.12.12:443/dns-query#直连'
   direct-nameserver:
+    - 'quic://223.5.5.5:853#直连'
+    - 'https://1.12.12.12:443/dns-query#直连'
+  nameserver:
     - 'quic://223.5.5.5:853#直连'
     - 'https://1.12.12.12:443/dns-query#直连'
 
