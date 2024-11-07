@@ -6,6 +6,7 @@ dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:53
+  use-hosts: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -18,5 +19,8 @@ dns:
   nameserver:
     - 'quic://223.5.5.5:853#直连'
     - 'https://1.12.12.12:443/dns-query#直连'
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6]
+  sm2.doh.pub: 106.55.91.174
 
 tcp-concurrent: true
