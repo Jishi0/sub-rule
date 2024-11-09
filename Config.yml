@@ -7,6 +7,7 @@ dns:
   ipv6: true
   listen: 0.0.0.0:53
   use-hosts: true
+  respect-rules: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -17,8 +18,8 @@ dns:
     - '*.msftconnecttest.com'
     - weatherapi.market.xiaomi.com
   nameserver:
-    - 'quic://dns.alidns.com:853#DIRECT'
-    - 'https://sm2.doh.pub:443/dns-query#DIRECT'
+    - quic://dns.alidns.com:853
+    - https://sm2.doh.pub:443/dns-query
 hosts:
   dns.alidns.com: [223.5.5.5, 223.6.6.6]
   sm2.doh.pub: 106.55.91.174
