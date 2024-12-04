@@ -8,15 +8,7 @@ dns:
   listen: 0.0.0.0:53
   use-hosts: true
   respect-rules: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.0/16
-  fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
-    - '+.msftncsi.com'
-    - '+.msftconnecttest.com'
-    - '+.market.xiaomi.com'
+  enhanced-mode: redir-host
   nameserver:
     - tls://1dot1dot1dot1.cloudflare-dns.com:853#PROXY
     - tls://dns.google:853#PROXY
