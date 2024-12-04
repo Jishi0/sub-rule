@@ -14,8 +14,8 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
-    - '*.msftncsi.com'
-    - '*.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - '+.msftconnecttest.com'
     - weatherapi.market.xiaomi.com
   nameserver:
     - quic://dns.alidns.com:853
