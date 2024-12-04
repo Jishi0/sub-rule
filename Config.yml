@@ -14,8 +14,8 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
-    - '*.msftncsi.com'
-    - '*.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - '+.msftconnecttest.com'
     - weatherapi.market.xiaomi.com
   nameserver:
     - tls://1dot1dot1dot1.cloudflare-dns.com:853#PROXY
