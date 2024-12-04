@@ -1,0 +1,35 @@
+mode: rule
+mixed-port: 7890
+log-level: info
+ipv6: true
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  use-hosts: true
+  respect-rules: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  fake-ip-filter:
+    - '*'
+    - '+.lan'
+    - '+.local'
+    - '+.msftncsi.com'
+    - '+.msftconnecttest.com'
+    - weatherapi.market.xiaomi.com
+  nameserver:
+    - tls://1dot1dot1dot1.cloudflare-dns.com:853#PROXY
+    - tls://dns.google:853#PROXY
+  proxy-server-nameserver:
+    - quic://dns.alidns.com:853#DIRECT
+    - https://sm2.doh.pub:443/dns-query#DIRECT
+  direct-nameserver:
+    - quic://dns.alidns.com:853#DIRECT
+    - https://sm2.doh.pub:443/dns-query#DIRECT
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6]
+  sm2.doh.pub: 106.55.91.174
+  1dot1dot1dot1.cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
+  dns.google: [8.8.8.8, 8.8.4.4]
+
+tcp-concurrent: true
