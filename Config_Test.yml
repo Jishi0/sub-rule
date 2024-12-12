@@ -16,6 +16,7 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
+    - weatherapi.market.xiaomi.com
   nameserver:
     - tls://1dot1dot1dot1.cloudflare-dns.com:853#PROXY
     - tls://dns.google:853#PROXY
