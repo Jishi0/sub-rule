@@ -30,4 +30,3 @@ hosts:
   sm2.doh.pub: 106.55.91.174
   1dot1dot1dot1.cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
   dns.google: [8.8.8.8, 8.8.4.4]
-  
