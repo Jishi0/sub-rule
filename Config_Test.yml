@@ -19,9 +19,7 @@ dns:
     - '+.local'
   nameserver:
     - tls://1.1.1.1:853#PROXY
-    - tls://1.0.0.1:853#PROXY
     - tls://8.8.8.8:853#PROXY
-    - tls://8.8.4.4:853#PROXY
   proxy-server-nameserver:
     - quic://dns.alidns.com:853#DIRECT
     - https://sm2.doh.pub:443/dns-query#DIRECT
