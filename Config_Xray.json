@@ -41,8 +41,8 @@
     {
       "tag": "socks-in",
       "protocol": "socks",
-      "listen": "127.0.0.1"，
-      "port": 10800，
+      "listen": "127.0.0.1",
+      "port": 10800,
       "settings": {
         "udp": true
       }
