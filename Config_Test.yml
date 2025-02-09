@@ -18,8 +18,10 @@ dns:
     - '+.lan'
     - '+.local'
   nameserver:
-    - tls://1dot1dot1dot1.cloudflare-dns.com:853#PROXY
-    - tls://dns.google:853#PROXY
+    - tls://1.1.1.1:853#PROXY
+    - tls://1.0.0.1:853#PROXY
+    - tls://8.8.8.8:853#PROXY
+    - tls://8.8.4.4:853#PROXY
   proxy-server-nameserver:
     - quic://dns.alidns.com:853#DIRECT
     - https://sm2.doh.pub:443/dns-query#DIRECT
@@ -29,5 +31,3 @@ dns:
 hosts:
   dns.alidns.com: [223.5.5.5, 223.6.6.6]
   sm2.doh.pub: 106.55.91.174
-  1dot1dot1dot1.cloudflare-dns.com: [1.1.1.1, 1.0.0.1]
-  dns.google: [8.8.8.8, 8.8.4.4]
