@@ -8,7 +8,6 @@ dns:
   enable: true
   use-hosts: true
   respect-rules: false
-  listen: 0.0.0.0:53
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/16
