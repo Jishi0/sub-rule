@@ -7,6 +7,7 @@ tcp-concurrent: true
 dns:
   enable: true
   use-hosts: true
+  use-system-hosts: false
   respect-rules: false
   ipv6: true
   enhanced-mode: fake-ip
