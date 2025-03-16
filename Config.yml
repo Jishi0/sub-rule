@@ -1,7 +1,7 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: info
+log-level: warning
 ipv6: true
 tcp-concurrent: true
 dns:
