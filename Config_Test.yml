@@ -19,3 +19,4 @@ dns:
     - '+.local'
   nameserver:
     - system
+    - dhcp://system
