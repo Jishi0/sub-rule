@@ -17,6 +17,8 @@ dns:
     - '*'
     - '+.lan'
     - '+.local'
+  default-nameserver:
+    - 0.0.0.0
   nameserver:
     - tls://1dot1dot1dot1.cloudflare-dns.com#PROXY
     - tls://dns.google#PROXY
