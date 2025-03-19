@@ -5,14 +5,15 @@
   "dns": {
     "servers": [
       "1.1.1.1:53"
-    ]
+    ],
+    "tag": "dns_inbound"
   },
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
        {
         "type": "field",
-        "ip": ["1.1.1.1"],
+        "inboundTag": ["dns_inbound"],
         "outboundTag": "proxy"
       },
       {
