@@ -1,8 +1,7 @@
 分流：
 ```mermaid
 flowchart TD
-  Start[客户端发起请求] --> rule[匹配规则]
-  rule --> Domain[匹配命中到基于域名的规则]
+  rule[匹配规则] --> Domain[匹配命中到基于域名的规则]
   rule --> IP[匹配到基于 IP 的规则]
 
   Domain --> |域名匹配命中到代理规则|Remote[通过代理服务器解析域名并建立连接]
