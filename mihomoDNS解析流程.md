@@ -31,8 +31,8 @@ flowchart TD
   continue1 --> |配置了direct-nameserver-follow-policy|NSPolicy1[匹配nameserver-policy]
   NSPolicy1 --> |匹配成功|Policy_Lookup[使用policy-nameserver解析]
   Policy_Lookup --> End[查询得到 IP]
-  NSPolicy --> |匹配失败|Direct_Lookup
-  continue --> |未配置direct-nameserver-follow-policy|Direct_Lookup[使用direct-nameserver解析]
+  NSPolicy1 --> |匹配失败|Direct_Lookup
+  continue1 --> |未配置direct-nameserver-follow-policy|Direct_Lookup[使用direct-nameserver解析]
   Direct_Lookup --> End[查询得到 IP]
 
   start --> |未配置direct-nameserver或不确定出站为直连|continue2[继续逻辑判断]
@@ -43,7 +43,7 @@ flowchart TD
   Lookup --> |未配置fallback|End
   Lookup --> |配置了fallback|FB_Lookup[使用nameserver和fallback并发解析]
   FB_Lookup --> FB_IP_Match[匹配fallback-filter]
-  FB_Lookup --> End
+  FB_IP_Match --> End
 
 ```
 
