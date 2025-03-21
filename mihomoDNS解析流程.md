@@ -17,7 +17,7 @@ flowchart TD
   Direct --> |客户端请求包含IP|Local[使用IP直接连接]
   DNS1 --> Local
 
-  rule --> IPOnDemand[匹配到(不一定命中)基于IP的规则且客户端请求不包含IP(IPOnDemand)]
+  rule --> IPOnDemand[匹配到（不一定命中）基于IP的规则且客户端请求不包含IP]
   IPOnDemand --> DNS2[使用DNS模块进行域名解析]
   DNS2 --> |继续匹配|rule
 
