@@ -32,7 +32,7 @@ flowchart TD
 
   start --> |未配置direct-nameserver或不确定出站为直连|Policy[匹配nameserver-policy]
   Policy --> |配置了nameserver-policy且匹配成功|Policy_Lookup[使用policy-nameserver解析]
-  Policy_Lookup --> |未配置fallback|End
+  Policy_Lookup --> End
   Policy --> |未配置nameserver-policy或匹配失败|Lookup[使用nameserver解析]
   Lookup --> |未配置fallback|End
   Lookup --> |配置了fallback|FB_Lookup[使用nameserver和fallback并发解析]
