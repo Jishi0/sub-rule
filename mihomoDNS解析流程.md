@@ -27,19 +27,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  start[域名] --> |配置了direct-nameserver且确定出站为直连|continue1[继续逻辑判断]
-  continue1 --> |配置了direct-nameserver-follow-policy|NSPolicy1[匹配nameserver-policy]
-  NSPolicy1 --> |匹配成功|Policy_Lookup[使用policy-nameserver解析]
-  Policy_Lookup --> End[查询得到 IP]
-  NSPolicy1 --> |匹配失败|Direct_Lookup
-  continue1 --> |未配置direct-nameserver-follow-policy|Direct_Lookup[使用direct-nameserver解析]
+  start[域名] --> |配置了direct-nameserver且确定出站为直连|Direct_Lookup[使用direct-nameserver解析]
   Direct_Lookup --> End[查询得到 IP]
 
-  start --> |未配置direct-nameserver或不确定出站为直连|continue2[继续逻辑判断]
-  continue2 --> |配置了nameserver-policy|NSPolicy2[匹配nameserver-policy]
-  continue2 --> |未配置nameserver-policy|Lookup
-  NSPolicy2 --> |匹配成功|Policy_Lookup
-  NSPolicy2 --> |匹配失败|Lookup[使用nameserver解析]
+  start --> |未配置direct-nameserver或不确定出站为直连|Policy[匹配nameserver-policy]
+  Policy --> |配置了nameserver-policy且匹配成功|Policy_Lookup[使用policy-nameserver解析]
+  Policy --> |未配置nameserver-policy或匹配失败|Lookup[使用nameserver解析]
   Lookup --> |未配置fallback|End
   Lookup --> |配置了fallback|FB_Lookup[使用nameserver和fallback并发解析]
   FB_Lookup --> FB_IP_Match[匹配fallback-filter]
