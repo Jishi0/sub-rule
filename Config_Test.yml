@@ -6,10 +6,8 @@ ipv6: true
 tcp-concurrent: true
 dns:
   enable: true
-  prefer-h3: false
   use-hosts: false
   use-system-hosts: false
-  respect-rules: false
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/16
@@ -19,4 +17,3 @@ dns:
     - '+.local'
   nameserver:
     - system
-    - dhcp://system
