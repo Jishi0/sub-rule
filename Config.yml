@@ -4,12 +4,21 @@ mode: rule
 log-level: warning
 ipv6: true
 tcp-concurrent: true
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - "udp://any:53"
+    - "tcp://any:53"
+  device: Mihomo
+  mtu: 9000
+  strict-route: true
 dns:
   enable: true
-  prefer-h3: false
   use-hosts: true
   use-system-hosts: false
-  respect-rules: false
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/16
