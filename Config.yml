@@ -10,8 +10,8 @@ tun:
   auto-route: true
   auto-detect-interface: true
   dns-hijack:
-    - "udp://any:53"
-    - "tcp://any:53"
+    - udp://any:53
+    - tcp://any:53
   device: Mihomo
   mtu: 9000
   strict-route: true
