@@ -17,7 +17,7 @@ tun:
   strict-route: true
 dns:
   enable: true
-  use-hosts: false
+  use-hosts: true
   use-system-hosts: false
   ipv6: true
   enhanced-mode: fake-ip
@@ -27,4 +27,14 @@ dns:
     - '+.lan'
     - '+.local'
   nameserver:
-    - system
+    - tls://1dot1dot1dot1.cloudflare-dns.com#PROXY
+    - tls://dns.google#PROXY
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+hosts:
+  dns.alidns.com: [223.5.5.5, 223.6.6.6]
+  doh.pub: [1.12.12.21, 120.53.53.53]
