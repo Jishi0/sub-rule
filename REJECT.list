@@ -1,5 +1,0 @@
-# HTTP/3
-AND,((NETWORK,UDP),(DST-PORT,443))
-
-# 哔哩漫游黑名单
-DOMAIN,black.qimo.ink
