@@ -1,0 +1,2 @@
+AND,((NETWORK,UDP),(DST-PORT,443))
+DOMAIN,black.qimo.ink
